@@ -38,8 +38,6 @@
 #include <mutex>
 #include <vector>
 
-#define loop while(true)
-
 //pre var deps
 #define loop while(true)
    //Platforms specific inclusion controller:
@@ -57,13 +55,15 @@
    //Custom = 11
 #define FCPLATFORM 0
 
+#define FCEXIT 42
+
 //Comment out if you do not want to compile with aspectu
-#define ASPECTUFXTOOLS
+//#define ASPECTUFXTOOLS
 
 //Patchwork System
-#include "patchwork/hash.h"
-#include "patchwork/patchwork_deps.h"
-#include "patchwork/patchwork.h"
+#include "patchwork/hash.hpp"
+#include "patchwork/patchwork_deps.hpp"
+#include "patchwork/patchwork.hpp"
 
 //FC Core
 #include "core/version.hpp"
@@ -85,10 +85,12 @@
 #include "core/overloading.hpp"
 #include "core/framework_driver.hpp"
 
-
 #include "core/index.hpp"
 
 int main(int argc, char *argv[]) {
-	
-	return 42;
+	fc_collect_args(argc, argv);
+   fc_define_presets();
+   patchwork_init();
+   index_stream();
+	return FCEXIT;
 }

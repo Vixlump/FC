@@ -17,7 +17,13 @@ freely, subject to the following restrictions:
 Cohen ter Heide
 support@lumpology.com
 */
-consteval uint64_t UIRN(char const *s, unsigned int count) {
+
+//Unique Identifying Random Number
+consteval uint64_t UIRN(char const *s, const unsigned int count) {
 	return count ? (UIRN(s, count - 1) ^ s[count - 1]) * 16777619u : 2166136261u;
 }
+constexpr uint64_t UIRN_R(char const *s, unsigned int count) {
+	return count ? (UIRN_R(s, count - 1) ^ s[count - 1]) * 16777619u : 2166136261u;
+}
 #define COREFC(X) UIRN(X, strlen(X))
+#define COREFC_RUNTIME(X) UIRN_R(X, strlen(X))

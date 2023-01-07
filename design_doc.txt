@@ -1,0 +1,111 @@
+Types:
+zinf - z#inf 1232131
+z8 - z#8 1231231
+z16 - z#16 213123
+z32 - z#32 123213
+z/z64 - z#64 123123
+z128 - z#128 213123
+ninf - n#inf 213123
+bool - b#true
+n8 - n#8 12312312
+n16 - n#16 234234
+n32 - n#32 3424
+n/n64 - n#2133 / n#64 324234234
+n128 - n#128 213213123
+float - r#f4123.12321
+double - r#d213123.14212
+triple - r#t123123.34523423420234
+string - s#Hello World
+record
+uirn - this_will_be_hashed / ##123125327894
+
+Additional Patchwork Registers:
+v#
+name_of_var
+
+a#
+name_of_var
+n#12345 / v# / a#
+ ...
+
+&#file.fc
+
+@#Position_of_note
+
+~#This line will not be tracked
+
+/#This is a comment
+
+*#name of framework
+
+0# - end of framework declaration
+
+;#/#this line|/#will|/#be|/#spreadout
+
+%#register;an;operation
+
+(#
+these
+lines
+will be merged
+into one
+)#
+
+(#
+/#
+multi
+line
+comment
+)#
+
+
++#n#|^#b01010 - processed seperatly then merged into one line along the | symbol
+
+e#patchwork error message
+
+Pre Defined Vars:
+_terminal - record
+_nan
+_inf
+
+Zeta Library Defined Vars:
+_z8_max
+_z8_min
+_z16_max
+_z16_min
+_z32_max
+_z32_min
+_z64_max
+_z64_min
+_z128_max
+_z128_min
+_n8_max
+_n8_min
+_n16_max
+_n16_min
+_n32_max
+_n32_min
+_n64_max
+_n64_min
+_n128_max
+_n128_min
+_phantom_var
+_pi
+_tau
+_e
+_0/_zero
+_1/_one
+_2/_two
+_3/_three
+_4/_four
+_5/_five
+_6/_six
+_7/_seven
+_8/_eight
+_9/_nine
+_10/_ten
+_100/_hundered
+_1000/_thousand
+_null
+_g
+_G

@@ -1,9 +1,12 @@
+&#zeta/format
 *x
-+file
++record
 _write
 _terminal
 _line
 s#Hello World
+_line
+v#
+_end
 _ret
 x*
-
